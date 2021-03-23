@@ -106,7 +106,9 @@ class HomeController extends Controller
         $email = new \SendGrid\Mail\Mail();
         $email->setFrom("fiverr.com.me@gmail.com", "Muhammad Hamza");
         $email->setSubject("Covid | Records | Sending with Twilio SendGrid");
-        $email->addTo("fiverr.com.me@gmail.com", "Example User");
+        $email->addTo("fiverr.com.me@gmail.com", "Muhammad Hamza");
+        $email->addTo("faraz@sitealive.com", "Faraz");
+        $email->addTo("sikander@sitealive.com", "Sikander");
         $email->addContent(
             "text/html", view('covid.data', compact('data'))->render()
         );
